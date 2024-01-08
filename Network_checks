@@ -1,0 +1,2 @@
+Check from all the ocp nodes[coreos] whether they are able to ping quay.io, whether nslookup is working fine for other ocp nodes, curl & see if they are able to get the .ign file.
+nmtui to set the ip, gateway, hostname[not required though], dns servers
