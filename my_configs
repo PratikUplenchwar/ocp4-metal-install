@@ -1,0 +1,22 @@
+ ip=10.74.239.25::10.74.239.254:255.255.255.0:bootstrap.lab.ocp.lan:ens192:none nameserver=10.74.239.226
+
+ ip=10.74.239.31::10.74.239.254:255.255.255.0:master1.lab.ocp.lan:ens192:none nameserver=10.74.239.226
+
+ ip=10.74.239.32::10.74.239.254:255.255.255.0:master2.lab.ocp.lan:ens192:none nameserver=10.74.239.226
+
+ ip=10.74.239.33::10.74.239.254:255.255.255.0:master3.lab.ocp.lan:ens192:none nameserver=10.74.239.226
+
+ ip=10.74.239.41::10.74.239.254:255.255.255.0:worker1.lab.ocp.lan:ens192:none nameserver=10.74.239.226
+
+ ip=10.74.239.42::10.74.239.254:255.255.255.0:worker2.lab.ocp.lan:ens192:none nameserver=10.74.239.226
+
+ ip=10.74.239.43::10.74.239.254:255.255.255.0:worker3.lab.ocp.lan:ens192:none nameserver=10.74.239.226
+
+ nmcli con mod ens192 ipv4.dns “10.74.239.226 10.75.5.25 10.68.5.26”
+
+
+sudo coreos-installer install /dev/sda --ignition-url http://10.74.239.226:8080/ocp5/bootstrap.ign --copy-network --insecure-ignition
+
+sudo coreos-installer install /dev/sda --ignition-url http://10.74.239.226:8080/ocp5/master.ign --copy-network --insecure-ignition
+
+sudo coreos-installer install /dev/sda --ignition-url http://10.74.239.226:8080/ocp5/worker.ign --copy-network --insecure-ignition
