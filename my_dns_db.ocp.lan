@@ -1,0 +1,34 @@
+##### cat /var/named/db.ocp.lan
+
+$TTL 1W
+@	IN	SOA	ns1.ocp.lan.	root (
+			2019070700	; serial
+			3H		; refresh (3 hours)
+			30M		; retry (30 minutes)
+			2W		; expiry (2 weeks)
+			1W )		; minimum (1 week)
+	IN	NS	ns1.ocp.lan.
+;
+;
+ns1.ocp.lan.		IN	A	10.74.239.226
+smtp.ocp.lan.		IN	A	10.74.239.226
+;
+helper.ocp.lan.		IN	A	10.74.239.226
+helper.lab.ocp.lan.	IN	A	10.74.239.226
+;
+api.lab.ocp.lan.	IN	A	10.74.239.226
+api-int.lab.ocp.lan.	IN	A	10.74.239.226
+;
+*.apps.lab.ocp.lan.	IN	A	10.74.239.226
+;
+bootstrap.lab.ocp.lan.	IN	A	10.74.239.25
+;
+master1.lab.ocp.lan.	IN	A	10.74.239.31
+master2.lab.ocp.lan.	IN	A	10.74.239.32
+master3.lab.ocp.lan.	IN	A	10.74.239.33
+;
+worker1.lab.ocp.lan.	IN	A	10.74.239.41
+worker2.lab.ocp.lan.	IN	A	10.74.239.42
+worker3.lab.ocp.lan.    IN      A       10.74.239.43
+;
+;EOF
