@@ -1,1 +1,25 @@
 # cat /var/named/db.ocp.lanrv
+$TTL 1W
+@	IN	SOA	ns1.ocp.lan.	root (
+			2019070700	; serial
+			3H		; refresh (3 hours)
+			30M		; retry (30 minutes)
+			2W		; expiry (2 weeks)
+			1W )		; minimum (1 week)
+	IN	NS	ns1.ocp.lan.
+;
+226.239.74.10.in-addr.arpa.	IN	PTR	api.lab.ocp.lan.
+226.239.74.10.in-addr.arpa.	IN	PTR	api-int.lab.ocp.lan.
+226.239.74.10.in-addr.arpa.	IN	PTR	apps.lab.ocp.lan
+;
+25.239.74.10.in-addr.arpa.	IN	PTR	bootstrap.lab.ocp.lan.
+;
+31.239.74.10.in-addr.arpa.	IN	PTR	master1.lab.ocp.lan.
+32.239.74.10.in-addr.arpa.	IN	PTR	master2.lab.ocp.lan.
+33.239.74.10.in-addr.arpa.	IN	PTR	master3.lab.ocp.lan.
+;
+41.239.74.10.in-addr.arpa.	IN	PTR	worker1.lab.ocp.lan.
+42.239.74.10.in-addr.arpa.	IN	PTR	worker2.lab.ocp.lan.
+43.239.74.10.in-addr.arpa.      IN      PTR     worker3.lab.ocp.lan.
+;
+;EOF
